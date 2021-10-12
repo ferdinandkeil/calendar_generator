@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Create Calendar</_name>
+  <id>create_calendar.com.gotrafficsign</id>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <dependency type="executable" location="extensions">simplestyle.py</dependency>
+  <param name="yearNumber" type="int" min="0" max="2100" gui-text="For Year: ">2019</param>
+  <param name="includeYear" type="boolean" gui-text="Include Year in Label" />
+  <param name="language" type="optiongroup" _gui-text="Language: ">
+    <option value="de-de">German</option>
+    <option value="en-us">English (US)</option>
+  </param>
+  <param name="firstDay" type="optiongroup" _gui-text="First day of the week: ">
+    <option value="monday">Monday</option>
+    <option value="sunday">Sunday</option>
+  </param>
+
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu _name="OpenCalendar">
+      </submenu>
+    </effects-menu>
+  </effect>
+
+  <script>
+    <command reldir="extensions" interpreter="python">create_calendar.py</command>
+  </script>
+
+</inkscape-extension>
